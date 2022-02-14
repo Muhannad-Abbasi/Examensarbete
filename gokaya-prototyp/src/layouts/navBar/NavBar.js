@@ -16,7 +16,6 @@ import LanguageIcon from '@material-ui/icons/Language';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import FaceIcon from '@material-ui/icons/Face';
 import RoomIcon from '@material-ui/icons/Room';
-import ConfirmationNumberIcon from '@material-ui/icons/ConfirmationNumber';
 import NavItem from './navItem/index';
 import logo from '../assets/logo.png';
 
@@ -28,30 +27,25 @@ const items = [
     icon: (<DashboardIcon />)
   },
   {
-    href: '/bookingsFrond',
-    title: 'Bookings',
+    href: '/how-it-works',
+    title: 'How it works',
     icon: (<ShoppingCartIcon />)
   },
   {
-    href: '/customers',
-    title: 'Customers',
+    href: '/about-us',
+    title: 'About us',
     icon: (<FaceIcon />)
   },
   {
-    href: '/stations',
-    title: 'manage_stations',
+    href: '/contact',
+    title: 'Contact',
     icon: (<RoomIcon />)
   },
   {
-    href: '/sites',
-    title: 'Sites',
+    href: '/blogs',
+    title: 'Blogs',
     icon: (<LanguageIcon />)
   },
-  {
-    href: '/promo-codes',
-    title: 'Promo Codes',
-    icon: (<ConfirmationNumberIcon />)
-  }
 ];
 
 const drawerWidth = 240;

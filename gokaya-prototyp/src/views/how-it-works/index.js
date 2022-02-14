@@ -15,20 +15,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const HomeView = () => {
+const HowItWorks = () => {
 
   const classes = useStyles();
 
   return (
     <Page
       className={classes.root}
-      title={'Home'}
+      title={'How it works'}
     >
       <Container className={classes.style}>
-          <p>hi</p>
+          <p>bye</p>
       </Container>
     </Page>
   )
 }
 
-export default HomeView;
+export default HowItWorks;

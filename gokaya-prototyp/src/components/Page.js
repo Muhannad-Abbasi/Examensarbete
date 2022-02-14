@@ -1,6 +1,7 @@
 import React, { forwardRef } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
+import Test from './Footer';
 
 const Page = forwardRef((
   {
@@ -18,6 +19,7 @@ const Page = forwardRef((
         <title>{title}</title>
       </Helmet>
       {children}
+      <Test />
     </div>
   );
 });
