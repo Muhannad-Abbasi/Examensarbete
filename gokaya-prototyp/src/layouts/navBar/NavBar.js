@@ -88,7 +88,14 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
-    })
+    }),
+    [theme.breakpoints.down('xs')]: {
+      width: `calc(100% - ${73}px)`,
+      transition: theme.transitions.create(['width', 'margin'], {
+        easing: theme.transitions.easing.sharp,
+        duration: theme.transitions.duration.enteringScreen
+      })
+    }
   },
   menuButton: {
     marginRight: 36,
@@ -107,7 +114,10 @@ const useStyles = makeStyles((theme) => ({
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen
-    })
+    }),
+    [theme.breakpoints.down('xs')]: {
+      width: 73
+    }
   },
   drawerClose: {
     transition: theme.transitions.create('width', {
@@ -118,6 +128,9 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7) + 1,
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(9) + 1
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: 0
     }
   },
   toolbar: {

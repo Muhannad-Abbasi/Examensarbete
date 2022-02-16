@@ -1,12 +1,13 @@
-import * as React from 'react';
+import { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
+import { makeStyles } from '@material-ui/core';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
+const ITEM_HEIGHT = 40;
+const ITEM_PADDING_TOP = 1;
 const MenuProps = {
   PaperProps: {
     style: {
@@ -38,23 +39,37 @@ function getStyles(name, personName, theme) {
   };
 }
 
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    width: '450px',
+    [theme.breakpoints.down('xs')]: {
+      width: '250px'
+    }
+  },
+  mt: {
+    marginTop: 10
+  }
+}));
+
+
 export default function SearchInput() {
   const theme = useTheme();
-  const [personName, setPersonName] = React.useState([]);
+  const [personName, setPersonName] = useState([]);
+  const classes = useStyles();
 
   const handleChange = (event) => {
     const {
       target: { value },
     } = event;
     setPersonName(
-      // On autofill we get a stringified value.
       typeof value === 'string' ? value.split(',') : value,
     );
   };
 
+
   return (
-    <div>
-      <FormControl sx={{ m: 1, width: 450, mt: 3}}>
+    <div className={classes.mt}>
+      <FormControl className={classes.formControl}>
         <Select
         sx={{ backgroundColor: 'white', borderRadius: 12, paddingLeft: 2}}
           multiple
