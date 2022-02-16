@@ -9,6 +9,10 @@ import Img1 from '../../layouts/assets/1.jpeg'
 import Img2 from '../../layouts/assets/2.jpg'
 import Img3 from '../../layouts/assets/3.jpg'
 import Img4 from '../../layouts/assets/4.jpg'
+import Log1 from '../../layouts/assets/lo1.png';
+import Log2 from '../../layouts/assets/lo2.png';
+import Log3 from '../../layouts/assets/lo3.png';
+import Log4 from '../../layouts/assets/lo4.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -99,6 +103,11 @@ const useStyles = makeStyles((theme) => ({
     width: '500px',
     height: '300px',
     padding: 5
+  },
+  logoImgs: {
+    width: '150px',
+    height: '80px',
+    paddingRight: 20
   }
 }));
 
@@ -116,7 +125,9 @@ const HomeView = () => {
           <Typography className={classes.searchHeroText}>Find your next Kayak or Sup Adventure</Typography>
           <SearchInput />
         </Grid>
-        <Typography className={classes.title}>What is <span className={classes.fPtitle}>GO</span><span className={classes.sPtitle}>KAYA</span></Typography>
+        <Box>
+          <Typography className={classes.title}>What is <span className={classes.fPtitle}>GO</span><span className={classes.sPtitle}>KAYA</span></Typography>
+        </Box>
         <Box className={classes.boxesContainer}>
           <Box className={classes.leftBox}>
             <Box className={classes.paddingLeftBox}>
@@ -169,7 +180,7 @@ const HomeView = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 40 }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 40, width: '100%' }}>
           <Box>
             <Typography className={classes.title}>Ljungskär Karlskrona</Typography>
           </Box>
@@ -180,6 +191,17 @@ const HomeView = () => {
           <Box>
             <img src={Img3} alt="3" className={classes.img}/>
             <img src={Img4} alt="4" className={classes.img}/>
+          </Box>
+        </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', marginTop: 40 }}>
+          <Box>
+            <Typography className={classes.title}>Partners</Typography>
+          </Box>
+          <Box sx={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+            <img src={Log1} alt="mincLogo" className={classes.logoImgs}/>
+            <img src={Log2} alt="mincLogo" className={classes.logoImgs}/>
+            <img src={Log3} alt="mincLogo" className={classes.logoImgs}/>
+            <img src={Log4} alt="mincLogo" className={classes.logoImgs}/>
           </Box>
         </Box>
       </Container>
