@@ -34,14 +34,70 @@ const productsData = [
     location: 'Hakenstigen 147',
     img: `${jsImg4}`,
     price: 200
-  }
+  },
+  {
+    id: 5,
+    productName: 'Åboden',
+    location: 'Borgeby Slottsväg 13',
+    img: `${jsImg1}`,
+    price: 300
+  },
+  {
+    id: 6,
+    productName: 'Kulla Kajak',
+    location: 'Promenaden 17',
+    img: `${jsImg2}`,
+    price: 500
+  },
+  {
+    id: 7,
+    productName: 'Lödde Båt & Kanotcenter',
+    location: 'Äppelbacken',
+    img: `${jsImg3}`,
+    price: 800
+  },
+  {
+    id: 8,
+    productName: 'Ven Kajak',
+    location: 'Hakenstigen 147',
+    img: `${jsImg4}`,
+    price: 200
+  },
+  {
+    id: 9,
+    productName: 'Åboden',
+    location: 'Borgeby Slottsväg 13',
+    img: `${jsImg1}`,
+    price: 300
+  },
+  {
+    id: 10,
+    productName: 'Kulla Kajak',
+    location: 'Promenaden 17',
+    img: `${jsImg2}`,
+    price: 500
+  },
+  {
+    id: 11,
+    productName: 'Lödde Båt & Kanotcenter',
+    location: 'Äppelbacken',
+    img: `${jsImg3}`,
+    price: 800
+  },
+  {
+    id: 12,
+    productName: 'Ven Kajak',
+    location: 'Hakenstigen 147',
+    img: `${jsImg4}`,
+    price: 200
+  },
 ];
 
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.background.dark,
     minHeight: '100%',
-    paddingBottom: theme.spacing(3),
+    paddingBottom: 0,
     paddingTop: theme.spacing(3),
   },
   style: {
@@ -88,7 +144,7 @@ const BookingView = () => {
       className={classes.root}
       title={'Booking'}
     >
-      <Box sx= {{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+      <Box sx= {{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', maxWidth: '50%', margin: 'auto' }}>
         {productsData.map((product) => {
           return (
             <>
