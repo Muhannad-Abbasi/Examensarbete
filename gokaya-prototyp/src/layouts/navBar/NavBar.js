@@ -27,8 +27,8 @@ const items = [
     icon: (<DashboardIcon />)
   },
   {
-    href: '/how-it-works',
-    title: 'How it works',
+    href: '/booking-kayak',
+    title: 'Book Now',
     icon: (<ShoppingCartIcon />)
   },
   {

@@ -60,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     width: '100%',
     textAlign: 'center',
-    marginBottom: 22
+    marginBottom: 22,
   },
   fPtitle: {
     color: '#FFB02A'
@@ -69,9 +69,10 @@ const useStyles = makeStyles((theme) => ({
     color: '#004F34'
   },
   boxesContainer: {
+    maxWidth: '70%',
     display: 'flex',
     justifyContent: 'space-around',
-    width: '100%',
+    margin: 'auto',
     [theme.breakpoints.down('xs')]: {
       flexDirection: 'column',
       width: '100%'
@@ -209,7 +210,7 @@ const HomeView = () => {
           <Typography className={classes.searchHeroText}>Find your next Kayak or Sup Adventure</Typography>
           <SearchInput />
         </Grid>
-        <Box>
+        <Box sx={{ width: '100%' }}>
           <Typography className={classes.title}>What is <span className={classes.fPtitle}>GO</span><span className={classes.sPtitle}>KAYA</span></Typography>
         </Box>
         <Box className={classes.boxesContainer}>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Navigate } from 'react-router-dom';
 import DashboardLayout from './layouts/navBar';
 import HomeView from './views/home/index';
-import HowItWorks from './views/how-it-works';
+import BookingView from './views/booking-kayak';
 
 export const routes = [
     {
@@ -10,7 +10,7 @@ export const routes = [
         element: <DashboardLayout />,
         children: [
             { path: 'home', element: <HomeView /> },
-            { path: 'how-it-works', element: <HowItWorks /> },
+            { path: 'booking-kayak', element: <BookingView /> },
             // { path: 'about-us', element: <AboutUsView /> },
             // { path: 'contact', element: <ContactView /> },
             // { path: 'blogs', element: <BlogsView /> },

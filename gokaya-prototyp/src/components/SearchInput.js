@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
 import { makeStyles } from '@material-ui/core';
+import { useNavigate } from 'react-router';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -56,6 +57,11 @@ export default function SearchInput() {
   const theme = useTheme();
   const [personName, setPersonName] = useState([]);
   const classes = useStyles();
+  const navigate = useNavigate();
+
+  const bookingPage = () => {
+    navigate(`/booking-kayak`);
+  };
 
   const handleChange = (event) => {
     const {
@@ -92,6 +98,7 @@ export default function SearchInput() {
               key={name}
               value={name}
               style={getStyles(name, personName, theme)}
+              onClick={() => bookingPage()}
             >
               {name}
             </MenuItem>
