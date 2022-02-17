@@ -1,8 +1,9 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 import DashboardLayout from './layouts/navBar';
-import HomeView from './views/home/index';
+import HomeView from './views/home';
 import BookingView from './views/booking-kayak';
+import BlogsView from './views/blog';
 
 export const routes = [
     {
@@ -11,8 +12,8 @@ export const routes = [
         children: [
             { path: 'home', element: <HomeView /> },
             { path: 'booking-kayak', element: <BookingView /> },
-            // { path: 'about-us', element: <AboutUsView /> },
-            // { path: 'contact', element: <ContactView /> },
+            { path: 'blogs', element: <BlogsView /> },
+            // { path: 'blogs/:id', element: <ContactView /> },
             // { path: 'blogs', element: <BlogsView /> },
             // { path: '/genre/:id', element: <GenreView /> },
             { path: '/', element: <Navigate to="/home" /> },

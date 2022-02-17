@@ -32,8 +32,8 @@ const items = [
     icon: (<ShoppingCartIcon />)
   },
   {
-    href: '/about-us',
-    title: 'About us',
+    href: '/blogs',
+    title: 'Blogs',
     icon: (<FaceIcon />)
   },
   {
