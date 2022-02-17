@@ -1,43 +1,38 @@
 import { useState, useEffect } from 'react';
-import { Card, CardContent, CardMedia, Typography, Button, CardActionArea, CardActions, makeStyles } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Typography, Button, CardActionArea, Divider, makeStyles } from '@material-ui/core';
 import { NavLink as RouterLink } from 'react-router-dom';
 import Loading from '../../../components/Loading';
 
 const useStyles = makeStyles(() => ({
-    style: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        width: '15rem',
-        margin: 6,
-        position: 'relative',
-        backgroundColor: 'whitesmoke'
-    },
-    resImg: {
-        maxWidth: '100%',
-        height: 'auto',
-        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
-        objectFit: 'contain'
-    },
-    rate: {
-        position: 'absolute',
-        top: 15,
-        fontSize: '1.5rem',
-        color: 'yellow',
-        textShadow: '0px 4px 4px rgba(0, 0, 0, 2.25)'
-    },
-    font: {
-        fontWeight: 'bold',
-        color: 'white',
-        textShadow: '0px 4px 4px rgba(0, 0, 0, 2.25)'
-    },
-    buttonCenter: {
-        justifyContent: 'center',
-        borderTop: '1px solid rgb(194, 194, 194)'
-    },
-    links: {
-        textDecoration: 'none'
-    }
+  style: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    width: '30rem',
+    margin: 6,
+    position: 'relative',
+    backgroundColor: 'whitesmoke'
+  },
+  resImg: {
+    maxWidth: '100%',
+    height: 'auto',
+    filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
+    objectFit: 'contain'
+  },
+  title: {
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  date: {
+    textAlign: 'center'
+  },
+  buttonToRight: {
+    float: 'right',
+    margin: '5px 0px'
+  },
+  links: {
+    textDecoration: 'none'
+  }
 }));
 
 const Content = () => {
@@ -76,7 +71,7 @@ const Content = () => {
         const imgUrl = data.attributes.cover?.data?.attributes.url;
         const alternativeText = data.attributes.cover?.data?.attributes.alternativeText;
         const title = data.attributes.title;
-        const description = data.attributes.description.substring(0, 100);
+        const description = data.attributes.description.substring(0, 200);
         const created = data.attributes.created;
         return (
           <Card className={classes.style}>
@@ -88,9 +83,13 @@ const Content = () => {
                 alt={alternativeText}
               />
               <CardContent>
-                <Typography>{created}</Typography>
-                <Typography>{title}</Typography>
+                <Typography className={classes.date}>{created}</Typography>
+                <Typography className={classes.title}>{title}</Typography>
+                <Divider sx={{ margin: '3px 0px' }}/>
                 <Typography>{description}...</Typography>
+                <RouterLink key={data.id} to={`/blogs/${data.id}`} className={classes.links}>
+                  <Button className={classes.buttonToRight}>Read more</Button>
+                </RouterLink>
               </CardContent>
             </CardActionArea>
           </Card>

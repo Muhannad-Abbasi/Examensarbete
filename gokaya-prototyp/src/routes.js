@@ -4,6 +4,7 @@ import DashboardLayout from './layouts/navBar';
 import HomeView from './views/home';
 import BookingView from './views/booking-kayak';
 import BlogsView from './views/blog';
+import BlogDetailsView from './views/blog/blog-details';
 
 export const routes = [
     {
@@ -13,7 +14,7 @@ export const routes = [
             { path: 'home', element: <HomeView /> },
             { path: 'booking-kayak', element: <BookingView /> },
             { path: 'blogs', element: <BlogsView /> },
-            // { path: 'blogs/:id', element: <ContactView /> },
+            { path: 'blogs/:id', element: <BlogDetailsView /> },
             // { path: 'blogs', element: <BlogsView /> },
             // { path: '/genre/:id', element: <GenreView /> },
             { path: '/', element: <Navigate to="/home" /> },
