@@ -19,24 +19,18 @@ const MenuProps = {
 };
 
 const names = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
+  'Helsingborg, Sweeden',
+  'Stockholm, Sweeden',
+  'Malmö, Sweeden',
+  'Göteborg, Sweeden'
 ];
 
 function getStyles(name, personName, theme) {
   return {
     fontWeight:
-      personName.indexOf(name) === -1
-        ? theme.typography.fontWeightRegular
-        : theme.typography.fontWeightMedium,
+    personName.indexOf(name) === -1
+    ? theme.typography.fontWeightRegular
+    : theme.typography.fontWeightMedium,
   };
 }
 
