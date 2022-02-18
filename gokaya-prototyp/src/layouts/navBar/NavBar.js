@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import clsx from 'clsx';
 import MenuIcon from '@material-ui/icons/Menu';
-import InputIcon from '@material-ui/icons/Input';
 import {
   AppBar, IconButton, Toolbar, Box, List, makeStyles, useTheme, MenuItem
 } from '@material-ui/core';
@@ -10,12 +9,13 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import KayakingIcon from '@mui/icons-material/Kayaking';
 import Divider from '@material-ui/core/Divider';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import LanguageIcon from '@material-ui/icons/Language';
+import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import FaceIcon from '@material-ui/icons/Face';
-import RoomIcon from '@material-ui/icons/Room';
 import NavItem from './navItem/index';
 import logo from '../assets/logo.png';
 
@@ -29,22 +29,17 @@ const items = [
   {
     href: '/booking-kayak',
     title: 'Book Now',
-    icon: (<ShoppingCartIcon />)
-  },
-  {
-    href: '/blogs',
-    title: 'Blogs',
-    icon: (<FaceIcon />)
-  },
-  {
-    href: '/contact',
-    title: 'Contact',
-    icon: (<RoomIcon />)
+    icon: (<KayakingIcon />)
   },
   {
     href: '/blogs',
     title: 'Blogs',
     icon: (<LanguageIcon />)
+  },
+  {
+    href: '/contact',
+    title: 'Contact',
+    icon: (<FaceIcon />)
   },
 ];
 
@@ -234,9 +229,14 @@ const NavBar = () => {
           </RouterLink>
           <Box flexGrow={1} />
           <IconButton
-            color="primary"
+            color="inhert"
           >
-            <InputIcon />
+            <ShoppingCartIcon />
+          </IconButton>
+          <IconButton
+            color="inhert"
+          >
+            <PersonIcon />
           </IconButton>
         </Toolbar>
       </AppBar>

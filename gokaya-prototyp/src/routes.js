@@ -5,6 +5,7 @@ import HomeView from './views/home';
 import BookingView from './views/booking-kayak';
 import BlogsView from './views/blog';
 import BlogDetailsView from './views/blog/blog-details';
+import NotFoundPageView from './views/404-page';
 
 export const routes = [
     {
@@ -15,7 +16,7 @@ export const routes = [
             { path: 'booking-kayak', element: <BookingView /> },
             { path: 'blogs', element: <BlogsView /> },
             { path: 'blogs/:id', element: <BlogDetailsView /> },
-            // { path: 'blogs', element: <BlogsView /> },
+            { path: '404', element: <NotFoundPageView /> },
             // { path: '/genre/:id', element: <GenreView /> },
             { path: '/', element: <Navigate to="/home" /> },
             { path: '*', element: <Navigate to="/404" /> }
