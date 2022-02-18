@@ -100,6 +100,16 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: 0,
     paddingTop: theme.spacing(3),
   },
+  container: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    flexWrap: 'wrap',
+    maxWidth: '50%',
+    margin: 'auto',
+    [theme.breakpoints.down('xs')]: {
+      maxWidth: '90%'
+    }
+  },
   style: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -144,7 +154,7 @@ const BookingView = () => {
       className={classes.root}
       title={'Booking'}
     >
-      <Box sx= {{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap', maxWidth: '50%', margin: 'auto' }}>
+      <Box className={classes.container}>
         {productsData.map((product) => {
           return (
             <>

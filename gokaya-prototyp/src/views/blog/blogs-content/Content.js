@@ -3,7 +3,7 @@ import { Card, CardContent, CardMedia, Typography, Button, CardActionArea, Divid
 import { NavLink as RouterLink } from 'react-router-dom';
 import Loading from '../../../components/Loading';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
   style: {
     display: 'flex',
     flexDirection: 'column',
@@ -28,7 +28,13 @@ const useStyles = makeStyles(() => ({
   },
   buttonToRight: {
     float: 'right',
-    margin: '5px 0px'
+    margin: '5px 0px',
+    [theme.breakpoints.down('xs')]: {
+      float: 'none',
+      display: 'flex',
+      justifyContent: 'center',
+      width: '100%'
+    }
   },
   links: {
     textDecoration: 'none'

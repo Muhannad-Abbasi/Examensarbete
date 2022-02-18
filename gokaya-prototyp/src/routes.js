@@ -17,7 +17,6 @@ export const routes = [
             { path: 'blogs', element: <BlogsView /> },
             { path: 'blogs/:id', element: <BlogDetailsView /> },
             { path: '404', element: <NotFoundPageView /> },
-            // { path: '/genre/:id', element: <GenreView /> },
             { path: '/', element: <Navigate to="/home" /> },
             { path: '*', element: <Navigate to="/404" /> }
         ]

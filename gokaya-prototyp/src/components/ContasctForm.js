@@ -25,7 +25,7 @@ export default function ContactForm() {
         alignItems: 'center',
         p: '24px'
       }}>
-      <h3 style={{ color: '#004e31', marginTop: '0' }}>Contact us and we will tell you more</h3>
+      <h3 style={{ color: '#004e31', marginTop: '0', textAlign: 'center' }}>Contact us and we will tell you more</h3>
       {isSubmitted ? (
         <div style={{ textAlign: 'center' }}>
           <CelebrationIcon fontSize="large" sx={{ color: '#004F34' }} />

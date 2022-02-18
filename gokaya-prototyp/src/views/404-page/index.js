@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 import Page from '../../components/Page';
-import './style.scss';
+import './style.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,15 +24,9 @@ const NotFoundPageView = () => {
       className={classes.root}
       title={'404 | page not found'}
     >
-      <div class="container">
-        <div class="boo-wrapper">
-            <div class="boo">
-            <div class="face"></div>
-            </div>
-            <div class="shadow"></div>
-        
-            <h1>Whoops!</h1>
-            <p>We couldn't find the page you<br />were looking for.</p>
+      <div id="main">
+        <div className='fof'>
+          <h1>Error 404 | page not found</h1>
         </div>
       </div>
     </Page>

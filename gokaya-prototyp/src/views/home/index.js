@@ -50,6 +50,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 'bold',
     color: 'white',
     textShadow: '5px 5px 5px black',
+    [theme.breakpoints.down('md')]: {
+      textAlign: 'center'
+    },
     [theme.breakpoints.down('xs')]: {
       fontSize: '1.5rem',
       textAlign: 'center'
@@ -82,9 +85,15 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #004F34',
     borderRadius: 5,
     maxWidth: '25%',
+    [theme.breakpoints.down('md')]: {
+      maxWidth: '30%'
+    },
+    [theme.breakpoints.down('sm')]: {
+      maxWidth: '33%'
+    },
     [theme.breakpoints.down('xs')]: {
       display: 'none'
-    }
+    },
   },
   hidden: {
     display: 'none',
@@ -99,12 +108,18 @@ const useStyles = makeStyles((theme) => ({
     width: '65%',
     [theme.breakpoints.down('xs')]: {
       minWidth: '100%',
-      borderRadius: 0
+      borderRadius: 0,
     }
   },
   paddingLeftBox: {
     padding: '5rem 1rem',
     textAlign: 'center',
+    [theme.breakpoints.down('md')]: {
+      padding: '3rem 1rem'
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '1rem 1rem'
+    },
   },
   leftBoxText: {
     fontFamily: 'Rozha One',
@@ -115,7 +130,16 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '3rem',
     border: '2px solid #004F34',
     backgroundColor: '#004F34',
-    color: 'white'
+    color: 'white',
+    '&:hover': {
+      backgroundColor: '#004F34'
+    },
+    [theme.breakpoints.down('md')]: {
+      marginTop: '1.5rem'
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '.9rem'
+    },
   },
   bookingButtonHidden: {
     marginTop: '3rem',
@@ -123,6 +147,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#004F34',
     color: 'white',
     display: 'none',
+    '&:hover': {
+      backgroundColor: '#004F34'
+    },
     [theme.breakpoints.down('xs')]: {
       display: 'block',
       marginTop: 12
@@ -155,12 +182,25 @@ const useStyles = makeStyles((theme) => ({
     color: '#004F34'
   },
   img: {
-    width: '500px',
+    width: '470px',
     height: '300px',
     padding: 5,
+    [theme.breakpoints.down('md')]: {
+      width: '400px'
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '350px',
+      height: '250px'
+    },
     [theme.breakpoints.down('xs')]: {
-      width: '150px',
-      height: '100px'
+      width: '250px',
+      height: '120px'
+    }
+  },
+  toColumns: {
+    display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column'
     }
   },
   logoContainer: {
@@ -177,7 +217,7 @@ const useStyles = makeStyles((theme) => ({
     height: '80px',
     paddingRight: 20,
     [theme.breakpoints.down('xs')]: {
-      width: '200px',
+      width: '150px',
       height: '50px',
       padding: 0,
       marginBottom: 12
@@ -188,7 +228,7 @@ const useStyles = makeStyles((theme) => ({
     height: '80px',
     paddingRight: 20,
     [theme.breakpoints.down('xs')]: {
-      width: '200px',
+      width: '150px',
       height: '50px',
       padding: 0,
       marginBottom: 0
@@ -220,7 +260,7 @@ const HomeView = () => {
               <Typography className={classes.leftBoxText}>Our first location at</Typography>
               <Typography className={classes.leftBoxText}>Fisktorget in Karlskrona</Typography>
               <Typography className={classes.leftBoxText}>Open every day: 08:00 - 21:00</Typography>
-              <Button className={classes.bookingButton}>Book Now</Button>
+              <Link to={'/booking-kayak'}><Button className={classes.bookingButton}>Book Now</Button></Link>
             </Box>
           </Box>
           <Box className={classes.rightBox}>
@@ -276,11 +316,11 @@ const HomeView = () => {
           <Box>
             <Typography className={classes.title}>Ljungskär Karlskrona</Typography>
           </Box>
-          <Box>
+          <Box className={classes.toColumns}>
             <img src={Img1} alt="1" className={classes.img}/>
             <img src={Img2} alt="2" className={classes.img}/>
           </Box>
-          <Box>
+          <Box className={classes.toColumns}>
             <img src={Img3} alt="3" className={classes.img}/>
             <img src={Img4} alt="4" className={classes.img}/>
           </Box>
