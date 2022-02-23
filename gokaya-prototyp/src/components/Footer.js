@@ -95,17 +95,17 @@ const Footer = () => {
           <h2 className={classes.footerHeader}>Gokaya</h2>
           <ul className={classes.listStyle}>
             <li>
-              <Link to={'/legal-conditions'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p>Legal conditions</p>
               </Link>
             </li>
             <li>
-              <Link to={'/privacy-policy'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p>Privacy policy</p>
               </Link>
             </li>
             <li>
-              <Link to={'/cookies'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p>Cookie policy</p>
               </Link>
             </li>
@@ -118,17 +118,17 @@ const Footer = () => {
           <h2 className={classes.footerHeader}>{'Discover Gokaya'}</h2>
           <ul className={classes.listStyle}>
             <li>
-              <Link to={'/blogs'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p>Blog</p>
               </Link>
             </li>
             <li>
-              <Link to={'/activities'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p className={classes.footerLinks}>Activities</p>
               </Link>
             </li>
             <li>
-              <Link to={'/guide'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p>Guides</p>
               </Link>
             </li>
@@ -141,18 +141,18 @@ const Footer = () => {
           <h2 className={classes.footerHeader}>Clubs</h2>
           <ul className={classes.listStyle}>
             <li>
-              <Link to={'/b2bregister'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p>I want to be seen on GoKaya!</p>
               </Link>
             </li>
             <li>
-              <Link to={'/clubs'} className={classes.footerLinks}>
+              <Link to={'#'} className={classes.footerLinks}>
                 <p>Our clubs</p>
               </Link>
             </li>
             <li>
               <div>
-                <Link to={'/sports/kayak'} className={classes.footerLinks}>
+                <Link to={'#'} className={classes.footerLinks}>
                   <p>Kayak, Canoe, SUP...</p>
                 </Link>
               </div>
